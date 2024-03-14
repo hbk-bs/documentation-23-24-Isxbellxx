@@ -4,16 +4,292 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>Page Title</title>
-		<meta name="description" content="something" />
-		<meta name="author" content="me" />
-
-		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<title>Classless example • Pico CSS</title>
+		<meta
+		  name="description"
+		  content="Just a pure semantic HTML markup, without .classes.  Built with Pico CSS."
+		/>
+		<link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
+	
+		<!-- Pico.css (Classless version) -->
+		<link
+		  rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+		/>
+		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
-		<h1>Hello World</h1>
-		<img src="/assets/images/kitten.png" />
-		<script type="text/javascript" src="/index.js"></script>
-	</body>
-</html>
+		<header> <h1>
+			<img src="fotos/titel.dokumentation.png" alt="Projekt 1 Bild">
+		    WS23/24 Digitale Kommunikation
+			<br>Isabella Schlüter</br>
+		</h1></header>
+		<body>
+		  <h2> -Auswahl der anfänglichen Programierprojekte-</h2>
+		  <p>Im Rahmen dieses Seminars wurden wir Schritt für Schritt in die Welt des Programmierens eingeführt. Zu Beginn beschäftigten wir uns mit handschriftlichen Algorithmen, um grundlegende Konzepte zu verstehen. Anschließend vertieften wir unser Verständnis, indem wir uns mit der Programmiersprache P5.js auseinandersetzten. Dabei lernten wir, wie man einfache Websites gestaltet und schließlich sogar ein interaktives Spiel entwickelt. Dieser Prozess ermöglichte es uns, unsere Fähigkeiten kontinuierlich zu erweitern und praktische Erfahrungen im Bereich der Softwareentwicklung zu sammeln.</p>
+		<br>
+		<section id="Perspektive">
+			<h3>Perspektive</h3>
+			<br>
+			<header>
+				<img src="fotos/projekt1.jpg" alt="Projekt 1 Bild" style="width: 400px;">
+			  </header>
+		    
+			<details>
+				<summary>Herangehensweise</summary>
+				<ul>
+				  <p>Ich habe mich bewusst für eine Auflösung von 100x100 Pixeln entschieden. Diese Entscheidung traf ich, um es mir einfacher zu machen, mich im Koordinatensystem der Pixel zurechtzufinden und eine klarere Vorstellung von den Abmessungen meines Projekts zu haben.</p>
+				</ul>
+			  </details>
+			  <details>
+				<summary>Problem</summary>
+				<p>
+					Die Perspektive ist entscheidend: Mit zunehmender Entfernung zur Mitte werden die Bäume kleiner. Es stellte sich als schwierig heraus, den viereckige Stamm und die Dreiecke der Nadeln harmonisch miteinander zu verbinden, insbesondere wenn sie in den kleineren Bereichen dargestellt wurden.
+				</p>
+			  </details>
+			  <details>
+				<summary>Weiter?</summary>
+				<ul>
+				  <p>Wie wäre es mit einer Animation? Es wäre schön, wenn sich die Sonne langsam über den Himmel bewegt oder die Landschaft sich generativ neu gestaltet, während die Grundelemente unverändert bleiben. Diese zusätzlichen dynamischen Elemente könnten dem Projekt eine zusätzliche Dimension verleihen und es noch ansprechender machen.</p>
+				</ul>
+			 </details>
+			  <details>
+				<summary>Code</summary>
+				<ul>
+
+				  <li>(sketch.cs)</li>
+					<br>function setup() { </br>
+					<br>const canvas = createCanvas(100, 100);</br>
+					<br>canvas.parent("sketch");</br>
+					<br>background(255);</br>
+				  
+					<br>fill(color("grey"));</br>
+					<br>triangle(30, 57, 100, 57, 75, 20);
+					  triangle(60, 60, 100, 0, 100, 60);
+					  triangle(-30, 70, 55, 70, 30, 20);</br>
+					<br>fill(225);</br>
+					<br>triangle(1, 90, 3, 79, 6, 90);
+					triangle(7, 95, 9, 80, 13, 95);
+					triangle(15, 85, 17, 74, 21, 85);
+					triangle(23, 87, 25, 75, 29, 87);
+					triangle(32, 90, 34, 80, 38, 90);
+					triangle(40, 83, 41, 75, 43, 83);
+					triangle(44, 87, 46, 78, 48, 87);
+					triangle(50, 82, 51, 74, 53, 82);
+					triangle(92, 90, 94, 82, 96, 90);
+					triangle(85, 95, 87, 82, 90, 95);
+					triangle(75, 98, 77, 85, 80, 98);</br>
+				  
+					
+					<br>fill(0);</br>
+					<br>rect(3, 90, 1, 3);
+					rect(9, 95, 1, 3);
+					rect(17, 85, 1, 3);
+					rect(25, 87, 1, 3);
+					rect(34, 90, 1, 3);
+					rect(41, 83, (1/5), 2);
+					rect(46, 87, (1/5), 2);
+					rect(51, 82, (1/5), 1);
+					rect(94, 90, 0.5, 2);
+					rect(87, 95, 1, 3);
+					rect(77, 98, 1, 3);</br>
+				  
+				  
+					
+					
+				  
+					<br>noFill();</br>
+					  <br>bezier(60, 60, 75, 80, 85, 85, 50, 100);
+					  bezier(50, 60, 55, 70, 85, 85, 20, 100); </br>
+					<br>fill(200);</br>
+					<br>ellipse(10, 15, 10, 10);</br>
+				  
+					<br>line(19, 15, 21, 15);
+					line(10, 23, 10, 25);
+					line(1, 15, -2, 15);
+					line(10, 5, 10, 7);
+					line(16, 20, 18, 22);
+					line(3, 20, 1, 22);
+					line(15, 9, 17, 7);
+					line(2, 7, 5, 9);</br>
+				   
+				  <br>}</br>
+					
+				  
+				  <br>function keyPressed() {</br>
+					  <br>if(key === "s") save("perspective-ischlueter.png");</br>
+				 <br> }</br>
+
+				 <li>(style.css)</li>
+				 <br>body {</br>
+					<br>display: flex;</br>
+					<br>align-items: center;</br>
+					<br>justify-content: center;</br>
+					<br>height: 100vh;</br>
+					<br>/* remove default padding */</br>
+					<br>padding: 0;</br>
+					<br>/* remove default margins */</br>
+					<br>margin: 0 auto;</br>
+				    <br> }</br>
+				<br>body > div {</br>
+					<br>align-self: center;</br>
+				<br>}</br>
+				  
+				</li>
+				  
+				</ul>
+			  </details>
+
+			  <section id="small multiples">
+				<h3>small multiples</h3>
+				<br>
+				<header>
+					<img src="fotos/small.jpeg" alt="Projekt 1 Bild" style="width: 400px;">
+				  </header>
+				</br>
+					<details>
+					  <summary>Herangehensweise</summary>
+					  <p>
+						Um eine visuelle Überlastung zu vermeiden, bleiben die Kreise und das Raster konstant und dienen als Leinwand für das Projekt. Die Grautöne wurden bewusst ausgewählt, um eine geordnete Abstufung von hell nach dunkel zu gewährleisten und eine klare visuelle Hierarchie zu schaffen.
+					  </p>
+					</details>
+					<details>
+						<summary>Problem</summary>
+						<p>
+							Die Entwicklung des Rasters gestaltete sich äußerst anspruchsvoll, insbesondere das Einbinden von Wiederholungen in jedem Feld erwies sich als herausfordernd. Gegenwärtig ist das Raster nur für eine bestimmte Größe funktionsfähig. Es wäre jedoch vorteilhaft, wenn das Raster flexibler gestaltet wäre und sich dynamisch an verschiedene Größen anpassen ließe.
+						</p>
+					  </details>
+					  <details>
+						<summary>Weiter?</summary>
+						<p>Um dieses Problem zu lösen, müsste ein neues Raster erstellt werden, das sich dynamisch an die Größe der Kreise anpasst. Dies erfordert möglicherweise eine Überarbeitung des Rastererstellungsalgorithmus, um sicherzustellen, dass es flexibel genug ist, um mit den sich ändernden Kreisgrößen Schritt zu halten. Anschließend müssen die entsprechenden Anpassungen im Code vorgenommen werden, um sicherzustellen, dass das Raster korrekt und synchron mit den Kreisen skaliert wird. </p>
+					  </details>
+					<details>
+					  <summary>Code</summary>
+					  <ul>
+						<li>sketch.js</li>
+							<br>function setup() {</br>
+								<br>// setup runs once</br>
+								<br>const canvas = createCanvas(400, 400);</br>
+								<br>canvas.parent("sketch")</br>
+								<br>background(128);</br>
+							<br> const diam = 80;</br>
+							 <br> const w = width/3;</br>
+							  <br>const h = height/3;</br>
+							  <br>const columns = 5;</br>
+							  <br>const rows = 5;</br>
+							
+							  <br>const cellWidth = width / columns;</br> 
+							  <br>const cellHeight = height / rows;</br> 
+							
+							  <br>for(let c = 0; c < columns; c++) {</br>
+								<br>for(let r = 0; r < rows; r++) {</br>
+								 <br> const x = c * cellWidth;</br>
+								  <br>const y = r * cellHeight;</br>
+							
+								  <br>rect(x, y, cellWidth, cellHeight);</br>
+							
+								  
+								<br>}</br>
+							 <br> }</br>
+							
+							  
+							
+							  <br>for(let x = diam/2; x < width; x = x + diam) {</br>
+								<br>for(let y = diam/2; y < height; y = y + diam){</br>
+							
+							
+								  <br>fill(200);</br>
+								  <br>ellipse(x, y, 78);</br>
+								  <br>noFill();</br>
+								  <br>ellipse(x, y, random(60));</br>
+								  <br>fill(225);</br>
+								  <br>ellipse(x, y, random(80));</br>
+								  <br>fill(150);</br>
+								  <br>ellipse(x, y, random(70));</br>
+								  <br>fill(100);</br>
+								  <br>rect(x-20, y-20, random(40), random(45));</br>
+							<br>push();</br>
+								  <br>translate(random(8), random(8));</br>
+								  <br>circle(x, y, random(15)); // der kreis in der Mitte </br>
+							<br>pop();</br>
+								  
+								<br>}</br>
+							  <br>}</br>
+							  
+							<br>}</br>
+							
+							<br>function draw() {</br>
+							  
+								
+								
+							  <br>}</br>
+								<br>// draw runs all the time</br>
+							
+							<br>function keyPressed() {</br>
+								<br>if(key === "s") save("small-multiples-ischlueter.png");</br>
+							<br>}</br>
+
+						<li>style.css</li>
+						<br>body {</br>
+							<br>display: flex;</br>
+							<br>align-items: center;</br>
+							<br>justify-content: center;</br>
+							<br>height: 100vh;
+							<br>/* remove default padding */</br>
+							<br>padding: 0;</br>
+							<br>/* remove default margins */</br>
+							<br>margin: 0 auto;</br> 
+						<br>}</br>
+						<br>body > div {</br>
+							<br>align-self: center;</br>
+						<br>}</br>
+						
+							<br>display: flex;</br>
+							<br>align-items: center;</br>
+							<br>justify-content: center;</br>
+							<br>height: 100vh;</br>
+							<br>/* remove default padding */</br>
+							<br>padding: 0;</br> 
+							<br>/* remove default margins */</br>
+							<br>margin: 0 auto;</br> 
+						<br>body > div {</br>
+						<br>	align-self: center;</br>
+						<br>}</br>
+						
+							
+							
+						</sketch>
+					  </ul>
+					</details>
+				  </section>
+
+				  <section id="sleepling uncle">
+					<h3>sleeping uncle (Gruppenarbeit)</h3>
+				<header>
+					<img src="fotos/onkel.jpeg" alt="Projekt 1 Bild" style="width: 400px;">
+				  </header>
+				<br>
+				<details>
+				  <summary>Das Projekt</summary>
+				  <ul><p>ChatGPT
+
+					Als Gruppe hatten wir die Vision, ein interaktives Spiel zu erschaffen, das die Spieler herausfordert. Nach zahlreichen Überlegungen kam die Idee auf: ein Labyrinth, in dem bestimmte Bereiche des Bodens tabu sind. Betritt man diese, verliert man das Spiel. Die Hintergrundgeschichte des Spiels dreht sich um einen nächtlichen Hungeranfall, bei dem der Spieler ein Sandwich zubereiten möchte, ohne dabei seinen schlafenden Onkel zu wecken. Der Haken dabei ist, dass der Onkel ein wütendes Monster ist, wenn er aufgeweckt wird.</p></ul>
+				</details>
+					<details>
+					  <summary>Mein Part</B></summary>
+					  <ul><p>Das Dokumentationsteam hat sich um zwei wichtige Aufgaben gekümmert: Zum einen wurde eine Website erstellt, die detailliert das Projekt vorstellt und alle relevanten Informationen bereitstellt. Zum anderen wurde ein Behind-the-Scenes (BTS) Video produziert, das einen Blick hinter die Kulissen des Projekts ermöglicht und den Entstehungsprozess dokumentiert.</p></ul>
+					  <details>
+						<summary>Videoschnitt</summary>
+						<ul><p>Für den Videoschnitt entschieden wir uns für das professionelle Programm Adobe Premiere Pro. Da jedoch keiner von uns Erfahrung mit dieser Software hatte, mussten wir uns selbstständig durch Ausprobieren und das Anschauen von Tutorials mit den Funktionen vertraut machen. Unser Ziel war es, den Prozess der Erstellung des BTS-Videos so einfach und zugänglich wie möglich zu gestalten. Daher fiel die Entscheidung, fast ausschließlich mit dem Handy zu filmen. Das Handy war schnell griffbereit und bot eine praktische Lösung, die es uns ermöglichte, spontane Momente und Einblicke in den Entstehungsprozess des Projekts festzuhalten.</p></ul>
+							<br>
+							<details>
+								<summary>Problem</summary>
+								<ul><p>Die Einarbeitung der Musik in das Videomaterial gestaltete sich als größere Herausforderung als erwartet. Es gab Phasen, in denen die beiden Elemente nicht nahtlos zusammenpassten, was dazu führte, dass das Gesamtbild des Videos beeinträchtigt wurde. Mit kleinsten Verschiebungen der Videos wurde das Problem weniger</p></ul>
+							  </details>
+					<header>
+						<img src="fotos/premiere.jpeg" alt="Projekt 1 Bild" style="width: 600px;">
+					  </header>
+					</details>
+					</details>
+		</body>			
+		</html>
+		

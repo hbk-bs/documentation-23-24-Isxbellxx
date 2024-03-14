@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(236, 230, 221);
+    margin: 0 auto;
+    }
+
+body {
+    font-family: 'Nimbus Mono PS', 'Courier New', 'monospace',sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    padding: 4em 1em;
+  }
+  
+  h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  body {
+    color: #555;
+  }
+
+  header {
+    background-color: #f8f0e5;
+    background-image: url("header.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 10vw 2em;
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  a {
+    color:rgb(213, 40, 40);
+  }
